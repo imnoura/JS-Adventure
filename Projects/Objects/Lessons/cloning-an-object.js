@@ -15,12 +15,12 @@ const circle = {
 
 //console.log(another);
 
-//**the new method:
+//**the new method: "Object.assign": (copies the properties and methods from one or more source objects into the target object and we can use that to clone an object or combine multiple objects into a single object)
 
 //const another = Object.assign({}, circle);
 //console.log(another);
 
-//**another simpler and more elegant way to clone an object:
+//**another simpler and more elegant way to clone an object: "The spread operator": (is used to spread an object which basically means getting all its properties and methods and putting them into another object)
 
 const another = { ...circle };
 
