@@ -23,5 +23,3 @@ function Address(street, city, zipCode) {
   this.city = city;
   this.zipCode = zipCode;
 }
-
-const circle = new Address(1);
