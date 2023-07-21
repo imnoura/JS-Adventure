@@ -4,7 +4,7 @@
 //80-89: B
 //90-100: A
 
-const array = [100, 100, 50];
+const array = [80, 80, 50];
 
 console.log(calculateGrade(array));
 
