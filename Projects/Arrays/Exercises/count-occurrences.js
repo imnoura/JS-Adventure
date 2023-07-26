@@ -12,7 +12,7 @@ function countOccurrences(array, searchElement) {
 //    return count;
 //}
 
-//The reduce method to achive the same thing with the less code:
+//The reduce method to achive the same thing with the less code: 
 return array.reduce((accumulator, current) => {
 const occurrence = (current === searchElement) ? 1 : 0
 console.log (accumulator, current, searchElement)
