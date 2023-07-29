@@ -9,6 +9,7 @@ let run = function () {
 };
 //We can call this anonymous function using  this reference:
 run();
+
 //Named Function Expression
 let run1 = function walk1() {
   console.log("run1");
