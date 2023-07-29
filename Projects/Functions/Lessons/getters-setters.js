@@ -6,14 +6,22 @@ const person = {
     return `${person.firstName} ${person.lastName}`;
   },
   set fullName(value) {
+    //*defensive programming*: We should do error handling at the beginning of a functon or a method.
+    if (typeof value !== "string") throw new Error("Value is not a string.");
+
     const parts = value.split(" ");
+    if (parts.length !== 2) throw new Error("Enter a first and last name.");
+
     this.firstName = parts[0];
     this.lastName = parts[1];
   },
 };
 
-person.fullName = "Edvard Munch";
-
+try {
+  person.fullName = true;
+} catch (e) {
+  alert(e);
+}
 console.log(person);
 
 //There are a couple of problems with this approach:
@@ -22,3 +30,6 @@ console.log(person);
 //THAT'S WHERE GETTERS AND SETTERS COME IN THE PICTURE
 //getters => access properties => to fix
 //setters => change (mutate) them
+
+//Sometimes we wanna report an error in our application that's where we throw an exception.
+//When we throw an exception the lines after throw statement are not executed
